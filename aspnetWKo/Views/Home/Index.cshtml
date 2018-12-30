@@ -1,0 +1,45 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="row">
+    @*<p>Enter bid price: <input data-bind="value:formattedPrice" /></p>*@
+    <p>Enter a numeric value: <input data-bind="value:attemptedValue" /></p>
+    <div data-bind="visible:!lastInputWasValid()">This is not a number!</div>
+</div>
+@section Scripts {
+    @Scripts.Render("~/bundles/knockout")
+    <script>
+        function myViewModel() {
+            var self = this;
+            self.price = ko.observable(25.99);
+            self.formattedPrice = ko.computed({
+                read: function () {
+                    return "$" + self.price().toFixed(2);
+                },
+                write: function (value) {
+                    value = parseFloat(value.replace(/[^\.\d]/g), "");
+                    self.price(isNaN(value) ? 0 : value);
+                }
+            });
+        }
+        function myViewModel2() {
+            var self = this;
+            self.accptedNumericValue = ko.observable(123);
+            self.lastInputWasValid = ko.observable(true);
+            self.attemptedValue = ko.computed({
+                read: self.accptedNumericValue,
+                write: function (value) {
+                    if (isNaN(value))
+                        self.lastInputWasValid(false);
+                    else {
+                        self.lastInputWasValid(true);
+                        self.accptedNumericValue(value);
+                    }
+                }
+            });
+        }
+        //ko.applyBindings(myViewModel);
+        ko.applyBindings(myViewModel2);
+    </script>
+}

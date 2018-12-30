@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.136
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "aspnetWKo", "aspnetWKo\aspnetWKo.csproj", "{A6691C59-0BE1-4646-9E1B-91F8372D0674}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A6691C59-0BE1-4646-9E1B-91F8372D0674}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6691C59-0BE1-4646-9E1B-91F8372D0674}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6691C59-0BE1-4646-9E1B-91F8372D0674}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6691C59-0BE1-4646-9E1B-91F8372D0674}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0B1F7B3E-9B22-4A9A-B831-D85BE82FEB8F}
+	EndGlobalSection
+EndGlobal
